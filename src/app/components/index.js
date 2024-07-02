@@ -1,4 +1,4 @@
-export * from './Button';
+export * from './button';
 export * from './Table';
-export * from './Tags';
+export * from './tags';
 export * from './Icons';

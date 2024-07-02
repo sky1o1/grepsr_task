@@ -1,10 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Box, Text } from '@chakra-ui/react';
-import { DataSetsIcon, WorkflowIcon, CreditUsageIcon } from '../components/Icons';
-import { ChakraButton } from '../components';
+import { DataSetsIcon, WorkflowIcon, CreditUsageIcon, ChakraButton } from '../components';
 
 const sidebarConst = [
   {
@@ -26,12 +25,26 @@ const sidebarConst = [
 
 export const Sidebar = () => {
   const router = useRouter();
-  console.log({ router });
-  const [activeTab, setActiveTab] = useState(0);
 
-  const handleTabClick = (index) => {
-    setActiveTab(index);
+  let url;
+  if (typeof window !== 'undefined') {
+    url = window.location.href;
+  } else {
+    url = '';
+  }
+  const parts = url.split('/');
+  const currentUrl = parts[parts.length - 1];
+
+  const [activeTab, setActiveTab] = useState('');
+
+  const handleTabClick = (route) => {
+    setActiveTab(route);
+    router.push(`/dashboard/${route}`);
   };
+
+  useEffect(() => {
+    setActiveTab(currentUrl);
+  }, [currentUrl]);
 
   return (
     <Box className="flex bg-white h-screen flex-col w-[212px]  pb-[22px] border-r border-gray-200">
@@ -46,11 +59,10 @@ export const Sidebar = () => {
           <Box
             key={index}
             onClick={() => {
-              handleTabClick(index);
-              router.push(`/dashboard/${item?.route}`);
+              handleTabClick(item?.route);
             }}
             className={`flex py-[10px] px-[16px] items-center rounded-md hover:bg-secondary cursor-pointer hover:text-primary transition ease-out duration-500
-               ${activeTab === index ? 'bg-secondary hover:bg-secondary text-primary' : null}`}>
+                 ${activeTab === item?.route ? 'bg-secondary hover:bg-secondary text-primary' : null}`}>
             <Box className={`w-[24px] h-[24px] mr-[2px] text-red-400`}>{item.icon}</Box>
             <Text className="hover:text-primary text-md font-man font-medium">{item.label}</Text>
           </Box>
