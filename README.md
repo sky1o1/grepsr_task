@@ -1,4 +1,4 @@
-# GREPSR ASSESMENT
+# GREPSR ASSESSMENT
 
 ## Description
 
