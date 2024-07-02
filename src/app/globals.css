@@ -4,6 +4,44 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .icon {
   @apply rounded-full cursor-pointer hover:bg-tableRow;
 }
+
+.table-wrapper {
+@apply border-spacing-0 w-full
+}
+
+.thead .tr {
+  @apply bg-tableHeader;
+}
+
+.th {
+  @apply py-[16px] px-[32px];
+}
+
+.tbody {
+  @apply bg-tableRow py-[16px] px-[32px]
+}
+
+.tbody tr:nth-child(even) {
+  @apply bg-white
+}
+
+.td {
+  @apply py-[16px] px-[32px];
+}
+
+.table-header {
+  @apply flex items-center justify-between
+}
+ 
+.header-label {
+  @apply flex gap-[2px] text-md items-center font-man font-bold;
+}
+
+.data-text {
+  @apply flex gap-[2px] text-md items-center font-man font-medium;
+}
+

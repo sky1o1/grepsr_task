@@ -11,13 +11,13 @@ const config = {
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
       },
       colors: {
-        header: '#1B2D4F',
         primary: '#1276FF',
         secondary: '#D6E7FF',
+        header: '#1B2D4F',
         tableHeader: '#DCE2F0',
         tableRow: '#F6F5FB',
         badge: '#ECF3FE',
-        card: '#F4F5FC',
+        background: '#F4F5FC',
         buttonText: '#E9EAED'
       }
     },
