@@ -8,17 +8,18 @@
     "start": "next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc.json",
-    "build-css": "tailwindcss build -i src/app/globals.css -o public/globals.css"
+    "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc.json"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@tanstack/react-table": "^8.19.2",
     "framer-motion": "^11.2.12",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.6.0",
