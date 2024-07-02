@@ -18,8 +18,12 @@ Task provided for hiring mid level frontend engineer
 
 ## Install Node.js version 18.17.0 using nvm
 
-- nvm install 18.17.0
-- nvm use
+```
+nvm install 18.17.0
+```
+```
+nvm use
+```
 
 ## Install dependencies using pnpm
 
