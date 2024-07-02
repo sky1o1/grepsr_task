@@ -8,8 +8,8 @@ Task provided for hiring mid level frontend engineer
 
 ### Prerequisites
 
-*nvm (Node Version Manager)
-*pnpm (Package Manager)
+1 nvm (Node Version Manager)
+2 pnpm (Package Manager)
 
 ## Clone the repository
 
