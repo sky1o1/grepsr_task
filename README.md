@@ -39,7 +39,7 @@ pnpm dev
 
 ## Navigate to browser
 
--http://localhost:3000/dashboard
+- http://localhost:3000/dashboard
 
 ## Tech stacks used
 
